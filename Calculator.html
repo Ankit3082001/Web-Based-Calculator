@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-color: #424242;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+    .container {
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        height: 60vh;
+        width: 100vw;
+    }
+    #container {
+        background-color: #ababab;
+        width: 210px;
+        padding: 8px 8px 20px 8px;
+        margin: 20px auto;
+        border-radius: 4px;
+        box-shadow: 2px 2px 5px #030303;
+    }
+    .model {
+        text-align: right;
+        font-size: 10px;
+        font-family: cursive;
+        font-weight: bold;
+        color:#0c0c0c;
+        text-shadow: 1px 0px 6px ;
+    }
+    #display {
+        display: block;
+        background-color: #5cb355 ;
+        border-radius: 4px;
+        height: 42px;
+        width: 172px;
+        margin: 15px auto;
+        padding: 0 10px;
+        box-shadow: 1px 3px 6px #030303;
+        text-align: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor:default;
+    }
+    .button {
+        display: inline-block;
+        margin: 2px;
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+        box-shadow: 0px 0px 5px #424242;
+    }
+    .digits {
+        color: #0c0c0c;
+        background-color: #f8ff9a;
+        text-shadow: 1px 1px 0px #12dae0;
+        border: 2px solid #030303;
+    }
+    .mathbutton {
+        color: #ffffff;
+        background-color: #424242;
+    }
+    .C {
+        background-color: #d21717;
+        color: #ffffff;
+    }
+    .mathbutton:hover, .digits:hover, .C:hover {
+        background-color: darkolivegreen;
+        box-shadow: 0px 0px 5px #38154d;
+
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div id="container">
+            <form name="Calculator">
+                <p class="model">Caseo fx-110</p>
+                <input type="text" name="text" id="display" readonly>
+                <br>
+                <input type="button" value="7" class="button digits" onclick="Calculator.display.value+=7">
+                <input type="button" value="8" class="button digits" onclick="Calculator.display.value+=8">
+                <input type="button" value="9"class="button digits" onclick="Calculator.display.value+=9">
+                <input type="button" value="+"class="button mathbutton" onclick="Calculator.display.value+='+'">
+                <br>
+                <input type="button" value="4"class="button digits" onclick="Calculator.display.value+=4">
+                <input type="button" value="5"class="button digits" onclick="Calculator.display.value+=5">
+                <input type="button" value="6"class="button digits" onclick="Calculator.display.value+=6">
+                <input type="button" value="-"class="button mathbutton" onclick="Calculator.display.value+='-'">
+                <br>
+                <input type="button" value="1"class="button digits" onclick="Calculator.display.value+=1">
+                <input type="button" value="2"class="button digits" onclick="Calculator.display.value+=2">
+                <input type="button" value="3"class="button digits" onclick="Calculator.display.value+=3">
+                <input type="button" value="x"class="button mathbutton" onclick="Calculator.display.value+='*'">
+                <br>
+                <input type="button" value="C"class="button C" onclick="Calculator.display.value=''">
+                <input type="button" value="0"class="button digits" onclick="Calculator.display.value+=0">
+                <input type="button" value="="class="button mathbutton" onclick="Calculator.display.value=eval(Calculator.display.value)">
+                <input type="button" value="÷"class="button mathbutton" onclick="Calculator.display.value+='/'">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
